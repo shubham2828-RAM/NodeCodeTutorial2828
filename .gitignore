@@ -1,0 +1,17 @@
+# Dependency directories
+node_modules/
+
+# Optional npm cache directory
+.npm
+
+# Environment variables file
+.env
+
+# Build artifacts
+/build
+/dist
+
+# Logs and cache files
+npm-debug.log
+.eslintcache
+.nyc_output
