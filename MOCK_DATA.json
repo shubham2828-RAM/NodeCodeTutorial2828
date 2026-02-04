@@ -798,5 +798,21 @@
         "email": "tpharoah2r@seattletimes.com",
         "gender": "Genderfluid",
         "job_title": "Electrical Engineer"
+    },
+    {
+        "id": 101,
+        "first_name": "Shubham",
+        "last_name": "Sharma",
+        "email": "testingNode@gmail.com",
+        "gender": "Male",
+        "job_title": "Associate Software Engineer"
+    },
+    {
+        "id": 102,
+        "first_name": "Arpit",
+        "last_name": "Yadav",
+        "email": "testingNode@@gmail.com",
+        "gender": "Male",
+        "job_title": "Advocate"
     }
 ]
