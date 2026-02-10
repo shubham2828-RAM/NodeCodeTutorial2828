@@ -1,6 +1,8 @@
 const express = require('express');
 const connectToMongoDB = require('./connect');
 const URL = require('./models/url');
+const path = require('path');
+const staticRouter = require('./routes/staticRouter'); 
 const urlRoutes = require('./routes/url');
 
 
@@ -12,7 +14,27 @@ connectToMongoDB().then(() => {
     console.log('Connected to MongoDB Successfully');
 });
 
+app.set('view engine', 'ejs');
+app.set('views',path.resolve('./views'));
+
+app.get('/test/ejs', async (req,res) => {
+    try {
+        const allUrls = await URL.find({}); 
+        res.render("home", {
+            urls: allUrls
+        });
+    } catch (err) {
+        console.error('Error fetching URLs:', err);
+        res.render("home", {
+            urls: [] 
+        });
+    }
+});
+
+
 app.use(express.json());
+app.use(express.urlencoded({extended: true}));
+app.use('/', staticRouter);
 app.use('/api/url', urlRoutes);
 app.get('/:shortId', async (req, res) => {
     try {

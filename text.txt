@@ -1,1 +1,18 @@
 This is a sample text file.Testing append file sync way.
+<!-- <body>
+    <h1 style="color: rgb(33, 139, 232);">Welcome to the URL Shortener Service</h1>
+    
+    <% if (urls && urls.length > 0) { %>
+        <% urls.forEach(url => { %>
+            <div style="margin-bottom: 20px;">
+                <p><strong>Original URL:</strong> <%= url.originalUrl %></p>
+                <p><strong>Short URL:</strong> 
+                    <a href="/<%= url.shortId %>"><%= url.shortId %></a>
+                    (Full: <%= url.originalUrl %>)
+                </p>
+            </div>
+        <% }) %>
+    <% } else { %>
+        <p>No URLs found in the database.</p>
+    <% } %>
+</body> -->

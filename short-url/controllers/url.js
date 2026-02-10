@@ -10,11 +10,15 @@ async function handleGenerateNewShortURL(req, res) {
             originalUrl: body.url,
             visitHistory: []
         });
-        return res.status(201).json({
-            status: "Success",
-            message: "Short URL created successfully",
-            shortUrl: `${req.protocol}://${req.get('host')}/${shortId}`
+        return res.render('home', {
+            id: shortId,
+            originalUrl: body.url
         });
+        // return res.status(201).json({
+        //     status: "Success",
+        //     message: "Short URL created successfully",
+        //     shortUrl: `${req.protocol}://${req.get('host')}/${shortId}`
+        // });
 }
 
 module.exports = {handleGenerateNewShortURL};
