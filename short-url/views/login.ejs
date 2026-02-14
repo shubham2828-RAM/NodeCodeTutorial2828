@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background: #3d5fdbc1;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+</head>
+<body>
+    <h1>Sign Up</h1>
+    <% console.log("hiii buddyy",locals.email) %>
+    
+        <div>
+            <form method="POST" action="/user/login">
+                <label>Email:</label>
+                <input type="text" name="email" placeholder="Enter Email" style="margin: 5px;" />
+                <br/>
+                <label>Password:</label>
+                <input type="password" name="password" placeholder="Enter Password" style="margin: 5px;" />
+                <br/>
+                <button type="login">Login</button>
+            </form>
+        </div>
+</body>
+</html>

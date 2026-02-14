@@ -4,6 +4,7 @@ const URL = require('./models/url');
 const path = require('path');
 const staticRouter = require('./routes/staticRouter'); 
 const urlRoutes = require('./routes/url');
+const userRoutes = require('./routes/users');
 
 
 
@@ -34,8 +35,14 @@ app.get('/test/ejs', async (req,res) => {
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
+
 app.use('/', staticRouter);
+app.use('/user/signup', staticRouter);
+app.use('/user/loginpage', staticRouter);
+
 app.use('/api/url', urlRoutes);
+app.use('/user/login', userRoutes);
+app.use('/user/signup/details', userRoutes);
 app.get('/:shortId', async (req, res) => {
     try {
         const shortId = req.params.shortId;
