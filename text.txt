@@ -16,3 +16,18 @@ This is a sample text file.Testing append file sync way.
         <p>No URLs found in the database.</p>
     <% } %>
 </body> -->
+
+
+
+
+
+
+
+--------- 
+<!-- <% if(locals.email ) { %>
+        <p> 
+            Sign Up Successful for <%= username %> with email <%= email %> and UserId = <%= userId %>
+            <br/>
+            You can now <a href="/user/login">Login</a>
+        </p>
+    <% } else { %> -->
