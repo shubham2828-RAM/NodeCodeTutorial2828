@@ -1,5 +1,7 @@
 const User = require('../models/users');
 const crypto = require("crypto");
+const { v4: uuidv4 } = require('uuid');
+const {setUser} = require('../service/auth');
 
 
 async function handleCreateSignup(req, res) {
@@ -35,6 +37,10 @@ async function handleLoginSignup(req, res) {
             error: "Invalid email or password"
         });
     }
+    const session = uuidv4();
+    console.log('session -> ',session);
+    setUser(session,userExists);
+    res.cookie("uuid",session)
     return res.redirect('/');
     
 }
