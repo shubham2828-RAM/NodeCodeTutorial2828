@@ -1,6 +1,6 @@
 // Use at least Nodemailer v4.1.0
 const nodemailer = require('nodemailer');
-
+require("dotenv").config();
 // Generate SMTP service account from ethereal.email
 nodemailer.createTestAccount((err, account) => {
     if (err) {
@@ -9,6 +9,8 @@ nodemailer.createTestAccount((err, account) => {
     }
 
     console.log('Credentials obtained, sending message...');
+    const password = process.env.DB_PASSWORD;
+    console.log("Get the password-> ",password);
 
     // Create a SMTP transporter object
     let transporter = nodemailer.createTransport({
