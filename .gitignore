@@ -15,3 +15,7 @@ node_modules/
 npm-debug.log
 .eslintcache
 .nyc_output
+
+
+#Package-lock.json
+package-lock.json
